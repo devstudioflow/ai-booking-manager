@@ -47,7 +47,7 @@ export default function FAQ() {
             Frequently asked questions
           </h2>
           <p className="text-lg text-slate-600">
-            Everything you need to know about BookingAI. Can't find the answer?{' '}
+            Everything you need to know about BookingAI. Can&apos;t find the answer?{' '}
             <a href="#" className="text-indigo-600 font-medium hover:underline">
               Chat with us.
             </a>

@@ -319,7 +319,7 @@ export default function RequestDetailPage() {
                   </button>
                 </div>
                 <div className="p-4 rounded-xl bg-violet-50 border border-violet-100">
-                  <p className="text-sm text-violet-900 leading-relaxed italic">"{r.aiSuggestedReply}"</p>
+                  <p className="text-sm text-violet-900 leading-relaxed italic">&quot;{r.aiSuggestedReply}&quot;</p>
                 </div>
                 <a
                   href={`mailto:${r.email}?subject=Re: ${encodeURIComponent(r.serviceType)} Request&body=${encodeURIComponent(r.aiSuggestedReply)}`}

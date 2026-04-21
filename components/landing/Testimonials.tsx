@@ -100,7 +100,7 @@ export default function Testimonials() {
               </div>
 
               <p className="text-sm text-slate-700 leading-relaxed flex-1 italic mb-6">
-                "{t.quote}"
+                &quot;{t.quote}&quot;
               </p>
 
               <div className="flex items-center gap-3 pt-4 border-t border-zinc-100">

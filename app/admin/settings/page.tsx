@@ -356,7 +356,7 @@ export default function SettingsPage() {
                   <select className="form-input appearance-none">
                     <option>All requests</option>
                     <option>Pending only</option>
-                    <option>Today's bookings</option>
+                    <option>Today&apos;s bookings</option>
                     <option>High priority only</option>
                   </select>
                 </div>

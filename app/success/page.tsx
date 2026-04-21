@@ -47,7 +47,7 @@ export default function SuccessPage() {
           </div>
           <h1 className="text-3xl font-extrabold text-slate-900 mb-3">Request Received!</h1>
           <p className="text-slate-600 leading-relaxed max-w-md">
-            Your request has been submitted and analyzed by our AI. We'll review
+            Your request has been submitted and analyzed by our AI. We&apos;ll review
             it and respond within 24 hours.
           </p>
         </div>

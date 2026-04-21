@@ -24,7 +24,7 @@ function EmptyDashboard() {
       </div>
       <h3 className="text-base font-semibold text-slate-900 mb-2">No requests yet</h3>
       <p className="text-sm text-slate-500 mb-6 max-w-xs">
-        Once customers submit booking requests they'll appear here with AI-generated summaries.
+        Once customers submit booking requests they&apos;ll appear here with AI-generated summaries.
       </p>
       <Link href="/book" className="btn-primary text-sm px-5 py-2.5">
         Submit a test booking
