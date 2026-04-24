@@ -1,19 +1,21 @@
+import React from 'react';
 import { cn } from '@/utils/cn';
 
-interface SkeletonProps {
-  className?: string;
-}
+// ── Base skeleton ─────────────────────────────────────────────────────────────
+// Accepte toutes les props HTML natives d'un <div> : className, style, id…
 
-export function Skeleton({ className }: SkeletonProps) {
+type SkeletonProps = React.HTMLAttributes<HTMLDivElement>;
+
+export function Skeleton({ className, ...props }: SkeletonProps) {
   return (
     <div
-      className={cn(
-        'animate-pulse rounded-md bg-zinc-200/80',
-        className
-      )}
+      className={cn('animate-pulse rounded-md bg-zinc-200/80', className)}
+      {...props}
     />
   );
 }
+
+// ── StatsCard skeleton ────────────────────────────────────────────────────────
 
 export function StatsCardSkeleton() {
   return (
@@ -29,6 +31,8 @@ export function StatsCardSkeleton() {
     </div>
   );
 }
+
+// ── Table row skeleton ────────────────────────────────────────────────────────
 
 export function TableRowSkeleton({ cols = 7 }: { cols?: number }) {
   return (
@@ -51,6 +55,8 @@ export function TableRowSkeleton({ cols = 7 }: { cols?: number }) {
   );
 }
 
+// ── Requests table skeleton ───────────────────────────────────────────────────
+
 export function RequestsTableSkeleton({ rows = 6 }: { rows?: number }) {
   return (
     <table className="w-full min-w-[900px]">
@@ -70,12 +76,18 @@ export function RequestsTableSkeleton({ rows = 6 }: { rows?: number }) {
   );
 }
 
+// ── Card skeleton ─────────────────────────────────────────────────────────────
+
 export function CardSkeleton({ lines = 3 }: { lines?: number }) {
   return (
     <div className="bg-white rounded-xl border border-zinc-200 shadow-sm p-5 space-y-3">
       <Skeleton className="w-1/3 h-4 rounded-full" />
       {Array.from({ length: lines }).map((_, i) => (
-        <Skeleton key={i} className="w-full h-3.5 rounded-full" style={{ width: `${70 + i * 10}%` } as React.CSSProperties} />
+        <Skeleton
+          key={i}
+          className="h-3.5 rounded-full"
+          style={{ width: `${70 + i * 10}%` }}
+        />
       ))}
     </div>
   );
